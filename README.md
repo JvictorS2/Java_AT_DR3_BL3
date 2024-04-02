@@ -2,15 +2,16 @@
 ## Assessment - Desenvolvimento de Serviços Web e Testes com Java
 
 ## O que é ?  
-Projeto tem como objetivo de demostrar a compreensão do uso do Framework Spark na construção de uma aplicação, 
-utilizando camadas de controller, services para a criação de CRUD e rotas enquanto utiliza maps como um banco de dados em memória (Simulando uma tabela para cada classe) e Lading pages acessadas por meio de rotas 
-definidas pela controller e a classe main do projeto.
+Projeto visa demostrar a compreensão do uso do Framework Spark na construção de uma aplicação,
+utilizando camadas de controller, services para a criação de CRUD e rotas enquanto utiliza maps como um banco de
+dados em memória (Simulando uma tabela para cada classe) e Lading pages acessadas por meio de rotas definidas pela controller e a classe main do projeto.
+            
 
 ## OBS: Sobre o projeto
-O projeto não possui nenhuma campo validado, processo de CRUD pode e vai lança algum erro caso algum campo seja preenchido com algum dado inválido, 
-, também a questão de relacionamento é simples, como o navegador não aceita método http diferente de get, estárei usando o método GET e Post para realizar o 
-método DELETE e PUT e também as landings pages possuem uma CSS bem simples.
-O Projeto tem como objetivo demostrar a capacidade e a compreenção de trabalhar com o Spark na construção de uma API RSTFUL.
+O projeto não possui nenhuma campo validado, processo de CRUD pode e vai lança algum erro caso algum campo seja preenchido com algum dado inválido,
+também a questão de relacionamento é simples, como o navegador não aceita método http diferente de get, estárei usando o método GET e Post para realizar
+o método DELETE e PUT e também as landings pages possuem uma CSS bem simples. O Projeto visa demostrar a capacidade e a compreenção de trabalhar com o Spark na
+construção de uma API RSTFUL.
 
 ## Sobre Spark
 
