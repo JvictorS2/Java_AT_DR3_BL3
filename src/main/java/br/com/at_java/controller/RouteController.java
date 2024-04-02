@@ -17,19 +17,19 @@ public class RouteController {
 
     };
 
-    // Cliente
+
     public static Route clientePageCreate = (req, res) -> {
         return app.class.getResourceAsStream("/template/cliente/create.html");
 
     };
 
-    // Cliente
+
     public static Route clientePageDelete = (req, res) -> {
         return app.class.getResourceAsStream("/template/cliente/delete.html");
 
     };
 
-    // Cliente
+
     public static Route clientePageUpdate = (req, res) -> {
         return app.class.getResourceAsStream("/template/cliente/update.html");
 
@@ -53,6 +53,53 @@ public class RouteController {
 
     public static Route funcionarioPageUpdate= (req, res) -> {
         return app.class.getResourceAsStream("/template/funcionario/Update.html");
+
+    };
+
+    public static Route funcionarioPageAdicionarPassgem= (req, res) -> {
+        return app.class.getResourceAsStream("/template/funcionario/addPassagem.html");
+
+    };
+
+    // Endereco
+    public static Route enderecoPageIndex= (req, res) -> {
+        return app.class.getResourceAsStream("/template/endereco/index.html");
+
+    };
+
+    public static Route enderecoPageCreate= (req, res) -> {
+        return app.class.getResourceAsStream("/template/endereco/create.html");
+
+    };
+
+    public static Route enderecoPageDelete= (req, res) -> {
+        return app.class.getResourceAsStream("/template/endereco/delete.html");
+
+    };
+
+    public static Route enderecoPageUpdate= (req, res) -> {
+        return app.class.getResourceAsStream("/template/endereco/update.html");
+
+    };
+
+    // Passagem
+    public static Route passagemPageIndex= (req, res) -> {
+        return app.class.getResourceAsStream("/template/passagem/index.html");
+
+    };
+
+    public static Route passagemPageCreate= (req, res) -> {
+        return app.class.getResourceAsStream("/template/passagem/create.html");
+
+    };
+
+    public static Route passagemPageDelete= (req, res) -> {
+        return app.class.getResourceAsStream("/template/passagem/delete.html");
+
+    };
+
+    public static Route passagemPageUpdate= (req, res) -> {
+        return app.class.getResourceAsStream("/template/passagem/update.html");
 
     };
 

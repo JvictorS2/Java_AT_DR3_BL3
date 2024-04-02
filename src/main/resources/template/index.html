@@ -24,6 +24,12 @@
                         <a href="/cliente/index" >Cliente</a>
                     </li>
                     <li>
+                        <a href="/endereco/index" >Endereço</a>
+                    </li>
+                    <li>
+                        <a href="/passagem/index" >Passagem</a>
+                    </li>
+                    <li>
                         <a href="/sobre" >Sobre</a>
                     </li>
                 </ul>
@@ -32,6 +38,52 @@
     </header>
 
     <div class="main-container" >
+        <div>
+            <h1>
+                Trabalho acadêmico, Engenharia da computação (Instituto Infnet - 3 semestre)
+            </h1>
+
+        </div>
+        <div>
+            <h2> Assessment - Desenvolvimento de Serviços Web e Testes com Java</h2>
+
+            <h3>O que é ?</h3>
+            <p>
+                Projeto visa demostrar a compreensão do uso do Framework Spark na construção de uma aplicação,
+                utilizando camadas de controller, services para a criação de CRUD e rotas enquanto utiliza maps como um banco de
+                dados em memória (Simulando uma tabela para cada classe) e Lading pages acessadas por meio de rotas definidas pela controller e a classe main do projeto.
+            </p>
+
+            <h3>OBS: Sobre o projeto?</h3>
+
+            <p>
+                O projeto não possui nenhuma campo validado, processo de CRUD pode e vai lança algum erro caso algum campo seja preenchido com algum dado inválido,
+                também a questão de relacionamento é simples, como o navegador não aceita método http diferente de get, estárei usando o método GET e Post para realizar
+                o método DELETE e PUT e também as landings pages possuem uma CSS bem simples. O Projeto visa demostrar a capacidade e a compreenção de trabalhar com o Spark na
+                construção de uma API RSTFUL.
+            </p>
+
+            <h3>Classes</h3>
+            <ul class="list-text"  >
+                <li>Aeroporto (Classe informações sobre o aeroporto, há apenas uma)</li>
+                <li>Passagem (Classe "Tabela" está classe possui um numeró fixo,10, e representa as passgens disponiveis</li>
+                <li>Cliente (Classe com informções de uma pessoa que terá uma passagem atribuida à ela)</li>
+                <li>Funcionario (Responsável por atribuir uma passagem a classe Cliente)</li>
+                <li>Endereço (Classe com o Endereço todas as classes do projeto, que se encaixam no contexto)</li>
+            </ul>
+
+            <h3>Estrutura de Projeto</h3>
+            <ul class="list-text" >
+                <li>Classes model.domain (Classes com atributos, getters ,setters, constructos e método toString, classes models)</li>
+                <li>Classes model.services (Classes que possui uma estrutura de dados map e métodos que seram usados na controller, cada service faz referência a uma classe model)</li>
+                <li>Classe controller (Classes onde será associado um método da classe service a uma rota e também é onde será resgatado os dados das requisiões e dos formulários)</li>
+                <li>Classe app (Clase que possui o método main e onde será terá as rotas do projetos)</li>
+            </ul>
+
+
+
+
+        </div>
 
     </div>
 </body>

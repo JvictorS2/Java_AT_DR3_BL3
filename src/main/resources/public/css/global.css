@@ -16,6 +16,15 @@ html {
     }
 }
 
+h1,
+h2,
+h3{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin:16px 0;
+    color:#3c18c5;
+}
+
+
 div,
 a,
 ul,
@@ -23,6 +32,16 @@ ol
 li{
     color: #fff;
     text-decoration: none;
+}
+
+.list-text li{
+
+    margin: 0 0 16px 16px;
+    transition: 1s;
+}
+
+.list-animation li:hover {
+    color: #24165c;
 }
 
 /* Header */
@@ -65,7 +84,7 @@ body{
 }
 
 .main-container{
-    padding: 32px;
+    padding: 32px 64px;
 }
 
 .list-options{
@@ -80,4 +99,6 @@ body{
     background:#24165c;
     border-radius:12px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+
 }
+

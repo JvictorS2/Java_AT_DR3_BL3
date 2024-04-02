@@ -103,6 +103,17 @@ public class FuncionarioController {
         return null;
     };
 
+    public static Route adicionarPassagemCliente = (req,res) -> {
+
+        Integer idCliente = Integer.parseInt(req.queryParams("idCliente"));
+        Integer idPassagem = Integer.parseInt(req.queryParams("idPassagem"));
+
+        FuncionarioService.adicionarPassagemEmCliente(idCliente,idPassagem);
+
+        res.redirect("/");
+        return null;
+    };
+
 
 
 }

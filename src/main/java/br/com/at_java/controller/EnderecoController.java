@@ -1,5 +1,6 @@
 package br.com.at_java.controller;
 
+import br.com.at_java.models.domain.Aeroporto;
 import br.com.at_java.models.domain.Endereco;
 import br.com.at_java.models.domain.Funcionario;
 import br.com.at_java.models.service.EnderecoService;
@@ -15,40 +16,69 @@ public class EnderecoController {
     };
 
     // GET: recuperar lista de funcionarios
+
     public static Route obterPorId = (req, res) -> {
         // recuperar valor do id informado
         Integer index = Integer.valueOf(req.params(("id")));
 
         // recuperar funcionario
-        Funcionario funcionario = FuncionarioService.obterPorId(index);
+        Endereco endereco = EnderecoService.obterPorId(index);
 
-        return "Funcionário recuperado: " + funcionario;
+        return "Funcionário recuperado: " + endereco;
 
     };
 
-    //POST: incluir funcionario
-    public static Route incluir = (req,res) -> {
-        Funcionario funcionario = new Funcionario();
+    public static Route incluir = (req, res) -> {
 
-        FuncionarioService.incluir(funcionario);
+        String rua = req.queryParams("rua");
+        String bairro = req.queryParams("bairro");
+        String cidade = req.queryParams("cidade");
 
-        return "Inclusão realizada com sucesso: " + funcionario;
+        Endereco endereco = new Endereco(rua,bairro,cidade);
 
+
+       EnderecoService.incluir(endereco);
+
+        // Aqui, você pode fazer o que precisa com os dados recebidos, como salvar em um banco de dados
+        res.redirect("/");
+        System.out.println("adicionado: " + endereco);
+        return null;
     };
 
     // DELETE: Deletar funcionario
     public static Route excluir = (req,res) -> {
         // recuperar valor do id informado
-        Integer index = Integer.valueOf(req.params(("id")));
-
+        Integer index = Integer.parseInt(req.queryParams("id"));
+        System.out.println(index);
         // recuperar funcionario
-        Funcionario funcionario = FuncionarioService.obterPorId(index);
+        Endereco endereco = EnderecoService.obterPorId(index);
 
         // excluir
-        FuncionarioService.excluir(index);
+        EnderecoService.excluir(index);
 
-        return "Exlusão realizada com sucesso: " + funcionario;
+        res.redirect("/");
+        //System.out.println("Apagado: " + funcionario);
+        return null;
 
+    };
+
+    public static Route atualizar = (req, res) -> {
+
+        Integer id = Integer.parseInt(req.queryParams("id"));
+        String rua = req.queryParams("rua");
+        String bairro = req.queryParams("bairro");
+        String cidade = req.queryParams("cidade");
+
+        Endereco enderecoAntigo = EnderecoService.obterPorId(id);
+        Endereco enderecoNovo = new Endereco(rua,bairro,cidade);
+
+
+        EnderecoService.atualizar(enderecoAntigo,enderecoNovo);
+
+        // Aqui, você pode fazer o que precisa com os dados recebidos, como salvar em um banco de dados
+        res.redirect("/");
+        System.out.println("adicionado: " + enderecoAntigo);
+        return null;
     };
 
 }

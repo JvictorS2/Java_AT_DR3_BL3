@@ -1,5 +1,6 @@
 package br.com.at_java.models.service;
 
+import br.com.at_java.models.domain.Cliente;
 import br.com.at_java.models.domain.Endereco;
 import br.com.at_java.models.domain.Funcionario;
 
@@ -35,5 +36,15 @@ public class EnderecoService {
     // endereco obterPorId: receber a chave (id)
     public static Endereco obterPorId(Integer id){
         return enderecoMap.get(id);
+    }
+
+    public static void atualizar(Endereco enderecoAntigo, Endereco enderecoNovo){
+
+        enderecoAntigo.setRua(enderecoNovo.getRua());
+        enderecoAntigo.setBairro(enderecoNovo.getBairro());
+        enderecoAntigo.setCidade(enderecoNovo.getCidade());
+
+        enderecoMap.put(enderecoAntigo.getId(),enderecoAntigo);
+
     }
 }

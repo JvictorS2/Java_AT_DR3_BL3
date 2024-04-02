@@ -48,6 +48,7 @@ public class Aeroporto {
     }
 
     public Aeroporto() {
+        this.id = 1;
         this.nome = "Aeroporto de Guarulhos";
         this.endereco = new Endereco();
         this.codigoIATA = "GRU";

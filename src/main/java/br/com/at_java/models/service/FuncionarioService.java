@@ -1,5 +1,6 @@
 package br.com.at_java.models.service;
 
+import br.com.at_java.models.domain.Cliente;
 import br.com.at_java.models.domain.Funcionario;
 
 import java.util.Collection;
@@ -45,6 +46,12 @@ public class FuncionarioService {
         funcionarioAntigo.setSalario(funcionarioNovo.getSalario());
 
         funcionarioMap.put(funcionarioAntigo.getId(),funcionarioAntigo);
+
+    }
+
+    public static void adicionarPassagemEmCliente(Integer idCliente,Integer idPassgem){
+        Cliente cliente = ClienteService.obterPorId(idCliente);
+        cliente.setPassagem(PassagemService.obterPorId(idPassgem));
 
     }
 
