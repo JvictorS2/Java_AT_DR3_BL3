@@ -50,6 +50,11 @@ Serialização e desserialização de JSON: O Spark tem suporte integrado para s
 - Classe controller (Classes onde será associado um método da classe service a uma rota e também é onde será resgatado os dados das requisiões e dos formulários)
 - Classe app (Clase que possui o método main e onde será terá as rotas do projetos)
 
+# Regras e uso
+- No Header há links em cada nome que redireciona para a página do texto comrespondente
+- Em cada página há botões os quais cada um é uma funcionalidade diferente do CRUD
+- Na página, funcionário há a funcionalidade "Adicionar passagem" esstá função atribui uma passagem a um cliente através do id de cada um, ambas as entidades precisam existir para poder realizar o processo
+
 ## Ferramentas usadas
 - JDK 17
 - InTellij
